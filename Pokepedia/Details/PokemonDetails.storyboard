@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j7U-0z-G58">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pokemon Details View Controller-->
+        <scene sceneID="8Wb-hp-97d">
+            <objects>
+                <viewController id="j7U-0z-G58" customClass="PokemonDetailsViewController" customModule="Pokepedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vOJ-Fw-mVg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7XE-LA-M9o">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4SZ-Xi-Ebx">
+                                        <rect key="frame" x="10" y="0.0" width="414" height="4000"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmQ-yj-5dE">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="4000"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="4000" id="TJF-41-N84"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4SZ-Xi-Ebx" firstAttribute="bottom" secondItem="wK6-Mv-t0E" secondAttribute="bottom" id="McT-Bf-9aJ"/>
+                                    <constraint firstItem="4SZ-Xi-Ebx" firstAttribute="leading" secondItem="wK6-Mv-t0E" secondAttribute="leading" constant="10" id="eMP-oU-i4o"/>
+                                    <constraint firstItem="4SZ-Xi-Ebx" firstAttribute="trailing" secondItem="wK6-Mv-t0E" secondAttribute="trailing" id="iHQ-8E-UOK"/>
+                                    <constraint firstItem="4SZ-Xi-Ebx" firstAttribute="width" secondItem="1j7-sI-ocx" secondAttribute="width" id="mrN-CQ-mjF"/>
+                                    <constraint firstItem="4SZ-Xi-Ebx" firstAttribute="top" secondItem="wK6-Mv-t0E" secondAttribute="top" id="snE-6D-rmi"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="wK6-Mv-t0E"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="1j7-sI-ocx"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="X3m-ct-vf8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="7XE-LA-M9o" secondAttribute="bottom" id="cWN-l3-f0L"/>
+                            <constraint firstItem="7XE-LA-M9o" firstAttribute="top" secondItem="vOJ-Fw-mVg" secondAttribute="top" id="eVK-ek-kPN"/>
+                            <constraint firstItem="7XE-LA-M9o" firstAttribute="trailing" secondItem="X3m-ct-vf8" secondAttribute="trailing" id="fjY-ku-deK"/>
+                            <constraint firstItem="7XE-LA-M9o" firstAttribute="leading" secondItem="X3m-ct-vf8" secondAttribute="leading" id="hL7-il-ScE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stackView" destination="4SZ-Xi-Ebx" id="Fi7-of-CLF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xCf-Fs-YA0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30.434782608695656" y="39.508928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
